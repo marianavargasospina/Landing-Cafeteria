@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cafe Luna — Cafe de especialidad, tostado en casa</title>
+    <meta name="description" content="Cafe Luna es una cafeteria de especialidad en Medellin. Granos de origen, tueste artesanal, pasteleria fresca y un espacio para pausar el dia." />
+    <meta name="theme-color" content="#f6efe6" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cafe Luna — Cafe de especialidad, tostado en casa" />
+    <meta property="og:description" content="Granos de origen, tueste artesanal y un espacio para pausar el dia en el corazon de Medellin." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:url" content="https://cafeluna.example.com" />
+    <meta property="og:locale" content="es_CO" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cafe Luna" />
+    <meta name="twitter:description" content="Cafe de especialidad en Medellin. Tostado en casa." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=80" />
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='50%25' y='56%25' font-size='52' text-anchor='middle'%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
+  </head>
+
+  <body>
+
+    <!-- Dark-mode toggle (checkbox hack, sin JS). Se controla con :has() + :checked -->
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-hidden="true" />
+
+    <!-- Skip link -->
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" role="banner">
+      <div class="container site-header__inner">
+        <a href="#top" class="brand" aria-label="Cafe Luna, inicio">
+          <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.5" />
+            <path d="M16 30c0-6 4-10 10-10 4 0 6 2 6 5 0 4-4 6-8 6-2 0-4-.5-5-1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            <circle cx="33" cy="18" r="1.8" fill="currentColor" />
+          </svg>
+          <span class="brand__text">
+            <span class="brand__name">Cafe Luna</span>
+            <span class="brand__tag">Tostado en casa</span>
+          </span>
+        </a>
+
+        <!-- Menu mobile con <details> (sin JS) -->
+        <details class="nav-mobile">
+          <summary class="nav-mobile__toggle" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+          </summary>
+          <nav class="nav-mobile__panel" aria-label="Navegacion principal mobile">
+            <a href="#historia">Historia</a>
+            <a href="#menu">Menu</a>
+            <a href="#horarios">Visitanos</a>
+            <a href="#testimonios">Reseñas</a>
+            <a href="#reserva">Reservar</a>
+            <a href="#reserva" class="btn btn--primary btn--sm">Reservar mesa</a>
+          </nav>
+        </details>
+
+        <nav class="nav-desktop" aria-label="Navegacion principal">
+          <a href="#historia">Historia</a>
+          <a href="#menu">Menu</a>
+          <a href="#horarios">Visitanos</a>
+          <a href="#testimonios">Reseñas</a>
+        </nav>
+
+        <div class="site-header__actions">
+          <label for="theme-toggle" class="theme-toggle" aria-label="Cambiar tema claro u oscuro" title="Cambiar tema">
+            <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" fill="currentColor" />
+              <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="12" y1="2"  x2="12" y2="5"  />
+                <line x1="12" y1="19" x2="12" y2="22" />
+                <line x1="2"  y1="12" x2="5"  y2="12" />
+                <line x1="19" y1="12" x2="22" y2="12" />
+                <line x1="4.5"  y1="4.5"  x2="6.5"  y2="6.5"  />
+                <line x1="17.5" y1="17.5" x2="19.5" y2="19.5" />
+                <line x1="4.5"  y1="19.5" x2="6.5"  y2="17.5" />
+                <line x1="17.5" y1="6.5"  x2="19.5" y2="4.5"  />
+              </g>
+            </svg>
+            <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.5A8 8 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="currentColor" />
+            </svg>
+          </label>
+          <a href="#reserva" class="btn btn--primary btn--sm">Reservar mesa</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ MAIN ============ -->
+    <main id="main">
+
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+
+        <div class="container hero__inner">
+          <p class="eyebrow eyebrow--light">Est. 2019 · Medellin, Colombia</p>
+          <h1 id="hero-title" class="hero__title">
+            El cafe empieza<br />
+            <em>mucho antes</em> de la taza.
+          </h1>
+          <p class="hero__lead">
+            Tostamos cada lote a mano, en pequenas cantidades, con granos de fincas
+            que visitamos una por una. Venite a probarlo lento.
+          </p>
+          <div class="hero__ctas">
+            <a href="#menu" class="btn btn--primary">Ver el menu</a>
+            <a href="#reserva" class="btn btn--ghost btn--ghost-light">Reservar mesa</a>
+          </div>
+
+          <ul class="hero__meta" aria-label="Datos rapidos">
+            <li><strong>12</strong> origenes activos</li>
+            <li><strong>6am</strong> apertura diaria</li>
+            <li><strong>4.9</strong> en Google (1.2k reseñas)</li>
+          </ul>
+        </div>
+
+        <a href="#historia" class="hero__scroll" aria-label="Bajar a la seccion historia">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v14m0 0l-6-6m6 6l6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </section>
+
+      <!-- ============ MARQUEE DE INDICADORES ============ -->
+      <section class="trust" aria-label="Reconocimientos">
+        <div class="container trust__grid">
+          <div class="trust__item"><span>Cup of Excellence</span><small>Jurado 2024</small></div>
+          <div class="trust__item"><span>SCA Certified</span><small>Tueste y barismo</small></div>
+          <div class="trust__item"><span>Direct Trade</span><small>12 fincas</small></div>
+          <div class="trust__item"><span>Condenast Traveler</span><small>"Top 10 cafes LATAM"</small></div>
+        </div>
+      </section>
+
+      <!-- ============ HISTORIA ============ -->
+      <section class="historia section" id="historia" aria-labelledby="historia-title">
+        <div class="container historia__grid">
+          <figure class="historia__media">
+            <img
+              src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1100&q=80"
+              alt="Barista sirviendo un espresso en la barra de Cafe Luna"
+              loading="lazy"
+              width="1100" height="1375" />
+            <figcaption>Mauro, jefe de barra desde 2020.</figcaption>
+          </figure>
+
+          <div class="historia__body">
+            <p class="eyebrow">Nuestra historia</p>
+            <h2 id="historia-title" class="section__title">
+              Un <em>ritual</em> de mañana<br />
+              que se volvio oficio.
+            </h2>
+            <p class="lede">
+              Abrimos con una maquina usada, seis tazas y la obsesion de servir
+              el cafe como lo tomariamos nosotros. Cinco anios despues somos un
+              equipo de catorce personas, pero la receta no cambio.
+            </p>
+            <p>
+              Viajamos cada cosecha a Antioquia, Huila y Narino. Conocemos a
+              los productores por nombre, pagamos sobre precio de mercado y
+              tostamos cada lote el mismo dia que lo servimos. No es marketing;
+              es la unica forma que encontramos de que sepa como tiene que saber.
+            </p>
+
+            <ul class="historia__stats" aria-label="Numeros de Cafe Luna">
+              <li>
+                <span class="historia__stat-num">12</span>
+                <span class="historia__stat-label">Fincas directas</span>
+              </li>
+              <li>
+                <span class="historia__stat-num">5 kg</span>
+                <span class="historia__stat-label">Tostados al dia</span>
+              </li>
+              <li>
+                <span class="historia__stat-num">14</span>
+                <span class="historia__stat-label">Personas en el equipo</span>
+              </li>
+            </ul>
+
+            <a href="#menu" class="link-arrow">
+              Ver el menu de hoy
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0l-6-6m6 6l-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MENU ============ -->
+      <section class="menu section section--muted" id="menu" aria-labelledby="menu-title">
+        <div class="container">
+          <header class="section__head">
+            <p class="eyebrow">Menu de la casa</p>
+            <h2 id="menu-title" class="section__title">Lo que servimos hoy.</h2>
+            <p class="section__sub">
+              Rotamos las recetas con la cosecha. Estos son los favoritos del mes.
+            </p>
+          </header>
+          <!-- Tabs con radios (sin JS) -->
+          <div class="menu-tabs" role="tablist" aria-label="Categorias del menu">
+            <input type="radio" name="menu-tab" id="tab-cafe" class="menu-tabs__input" checked />
+            <label for="tab-cafe" class="menu-tabs__label">Cafe</label>
+
+            <input type="radio" name="menu-tab" id="tab-te" class="menu-tabs__input" />
+            <label for="tab-te" class="menu-tabs__label">Te & infusiones</label>
+
+            <input type="radio" name="menu-tab" id="tab-pasteleria" class="menu-tabs__input" />
+            <label for="tab-pasteleria" class="menu-tabs__label">Pasteleria</label>
+            
+            <div class="menu-tabs__panels">
+
+              <!-- CAFE -->
+              <div class="menu-tabs__panel menu-tabs__panel--cafe">
+                <ul class="cards">
+                  <li class="card">
+                    <figure class="card__media">
+                      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
+                           alt="Taza de flat white con arte latte en forma de tulipan"
+                           loading="lazy" width="900" height="900" />
+                    </figure>
+                    <div class="card__body">
+                      <div class="card__head">
+                        <h3 class="card__title">Flat White</h3>
+                        <span class="card__price">$9.000</span>
+                      </div>
+                      <p class="card__desc">Dos ristretti y leche entera texturizada a 60°C. Equilibrio dulce, sin exceso de espuma.</p>
+                      <ul class="tags tags--sm">
+                        <li>Cafeina media</li>
+                        <li>Leche entera</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- TE -->
+              <div class="menu-tabs__panel menu-tabs__panel--te">
+                <ul class="cards">
+                  <!-- 3 cards de té -->
+                </ul>
+              </div>
+
+              <!-- PASTELERIA -->
+              <div class="menu-tabs__panel menu-tabs__panel--pasteleria">
+                <ul class="cards">
+                  <!-- 3 cards de pastelería -->
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <p class="menu__note">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v5m0 3v.01" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            Precios en pesos colombianos. Tenemos opciones sin lactosa, sin gluten y veganas. Preguntale al barista.
+          </p>
+        </div>
+      </section>
+
+      <section class="visitanos section" id="horarios" aria-labelledby="visitanos-title">
+        <div class="container visitanos__grid">
+          <div>
+            <p class="eyebrow">Visitanos</p>
+            <h2 id="visitanos-title" class="section__title">Tu pausa tiene<br /><em>una direccion.</em></h2>
+            <dl class="visitanos__data">
+              <div>
+                <dt>Direccion</dt>
+                <dd>Calle 10 # 34-18, El Poblado<br />Medellin, Colombia</dd>
+              </div>
+              <div>
+                <dt>Contacto</dt>
+                <dd><a href="tel:+576046040000">+57 (604) 604 0000</a><br /><a href="mailto:hola@cafeluna.com">hola@cafeluna.com</a></dd>
+              </div>
+              <div>
+                <dt>Horarios</dt>
+                <dd><ul class="hours"><li><span>Lun - Vie</span><span>6:00 - 20:00</span></li><li><span>Sab - Dom</span><span>7:00 - 21:00</span></li></ul></dd>
+              </div>
+            </dl>
+          </div>
+          <div class="visitanos__map" role="img" aria-label="Mapa estilizado de Cafe Luna en El Poblado">
+            <svg viewBox="0 0 480 420" aria-hidden="true">
+              <path d="M0 140L480 110M0 260L480 230M80 0L110 420M260 0L300 420M410 0L450 420" fill="none" stroke="currentColor" stroke-width="10" opacity=".25" />
+              <circle cx="240" cy="190" r="32" fill="var(--accent-soft)" />
+              <circle cx="240" cy="190" r="10" fill="var(--accent)" />
+              <text x="240" y="250" text-anchor="middle" font-family="Fraunces, serif" font-size="18" fill="currentColor">Cafe Luna</text>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TESTIMONIOS ============ -->
+      <section class="testimonios section section--muted" id="testimonios" aria-labelledby="testimonios-title">
+        <div class="container">
+          <header class="section__head section__head--center">
+            <p class="eyebrow">Lo que dicen</p>
+            <h2 id="testimonios-title" class="section__title">Reseñas reales,<br />clientes reales.</h2>
+          </header>
+
+          <ul class="testimonios__grid">
+            <li class="testimonio">
+              <div class="testimonio__rating" aria-label="5 de 5 estrellas">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 22l-6-4-6 4 1.5-8.5L2 9h7z" fill="currentColor"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 22l-6-4-6 4 1.5-8.5L2 9h7z" fill="currentColor"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 22l-6-4-6 4 1.5-8.5L2 9h7z" fill="currentColor"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 22l-6-4-6 4 1.5-8.5L2 9h7z" fill="currentColor"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5L18 22l-6-4-6 4 1.5-8.5L2 9h7z" fill="currentColor"/></svg>
+              </div>
+              <blockquote class="testimonio__quote">
+                El flat white mas balanceado que tome en Medellin. Me quede toda
+                la tarde trabajando — el wi-fi vuela y nadie te apura.
+              </blockquote>
+              <footer class="testimonio__author">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+                     alt="" loading="lazy" width="56" height="56" />
+                <div>
+                  <strong>Valentina Restrepo</strong>
+                  <span>Disenadora · Cliente desde 2022</span>
+                </div>
+              </footer>
+            </li>
+
+            <!-- Duplicá esta <li class="testimonio"> dos veces más y cambiá rating/texto/autor -->
+
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ RESERVA ============ -->
+      <section class="reserva section" id="reserva" aria-labelledby="reserva-title">
+        <div class="container reserva__grid">
+          <div class="reserva__intro">
+            <p class="eyebrow">Reservar mesa</p>
+            <h2 id="reserva-title" class="section__title">Apartate un lugar<br />en la barra.</h2>
+            <p class="lede">
+              Recomendamos reservar los fines de semana y en hora valle
+              (10am — 12m, 3pm — 5pm). Respondemos en menos de 2 horas.
+            </p>
+            <ul class="reserva__perks">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Mesa garantizada 15 minutos antes
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Opciones dieteticas (vegano, sin gluten, sin lactosa)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4 4 10-10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Grupos de 6+ con cata guiada gratis
+              </li>
+            </ul>
+          </div>
+
+          <form class="form" action="mailto:reservas@cafeluna.com" method="post" enctype="text/plain">
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Nombre</span>
+                <input class="field__input" type="text" name="nombre" placeholder="Tu nombre completo" required autocomplete="name" />
+              </label>
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" type="email" name="email" placeholder="tu@email.com" required autocomplete="email" />
+              </label>
+            </div>
+
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Fecha</span>
+                <input class="field__input" type="date" name="fecha" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Hora</span>
+                <input class="field__input" type="time" name="hora" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Personas</span>
+                <select class="field__input" name="personas" required>
+                  <option value="1">1 persona</option>
+                  <option value="2" selected>2 personas</option>
+                  <option value="3">3 personas</option>
+                  <option value="4">4 personas</option>
+                  <option value="5">5 personas</option>
+                  <option value="6">6+ (cata guiada)</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="field">
+              <span class="field__label">Mensaje (opcional)</span>
+              <textarea class="field__input field__input--area" name="mensaje" rows="4" placeholder="Alguna restriccion dietetica o peticion especial?"></textarea>
+            </label>
+
+            <div class="form__actions">
+              <p class="form__legal">
+                Al reservar aceptas recibir confirmacion por email.
+                <br />No spam, nunca.
+              </p>
+              <button type="submit" class="btn btn--primary btn--lg">
+                Confirmar reserva
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0l-6-6m6 6l-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+      <!-- ============ FOOTER ============ -->
+      <footer class="site-footer" role="contentinfo">
+        <div class="container site-footer__grid">
+          <div class="site-footer__brand">
+            <a href="#top" class="brand brand--footer">
+              <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.5" />
+                <path d="M16 30c0-6 4-10 10-10 4 0 6 2 6 5 0 4-4 6-8 6-2 0-4-.5-5-1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <circle cx="33" cy="18" r="1.8" fill="currentColor" />
+              </svg>
+              <span class="brand__text">
+                <span class="brand__name">Cafe Luna</span>
+                <span class="brand__tag">Tostado en casa</span>
+              </span>
+            </a>
+            <p class="site-footer__blurb">
+              Cafe de especialidad, pasteleria fresca y buenas conversaciones.
+              Desde 2019 en El Poblado.
+            </p>
+            <ul class="socials" aria-label="Redes sociales">
+              <li>
+                <a href="https://instagram.com" aria-label="Instagram de Cafe Luna">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8" />
+                    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8" />
+                    <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://tiktok.com" aria-label="TikTok de Cafe Luna">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M15 3v10.2a3.3 3.3 0 1 1-3.3-3.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 3c.2 2.5 2 4.3 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://youtube.com" aria-label="YouTube de Cafe Luna">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="2.5" y="5.5" width="19" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M10.5 9.2v5.6l5-2.8z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://x.com" aria-label="X (Twitter) de Cafe Luna">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 4l7.2 9.6L4.4 20h2.4l5.7-6 4.5 6H21l-7.6-10.1L20.5 4h-2.4l-5.1 5.4L8.5 4z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="site-footer__col">
+            <h3>Explorar</h3>
+            <ul>
+              <li><a href="#historia">Historia</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#horarios">Visitanos</a></li>
+              <li><a href="#testimonios">Reseñas</a></li>
+              <li><a href="#reserva">Reservar</a></li>
+            </ul>
+          </div>
+
+          <div class="site-footer__col">
+            <h3>Contacto</h3>
+            <ul>
+              <li>Calle 10 #34-12</li>
+              <li>El Poblado, Medellin</li>
+              <li><a href="tel:+5746040000">+57 (604) 604 0000</a></li>
+              <li><a href="mailto:hola@cafeluna.com">hola@cafeluna.com</a></li>
+            </ul>
+          </div>
+
+          <div class="site-footer__col site-footer__col--wide">
+            <h3>Granos en tu inbox</h3>
+            <p>Una vez al mes te contamos que estamos tostando, que libros leemos
+              en la barra y cuando abrimos la siguiente cata.</p>
+            <form class="newsletter" action="mailto:hola@cafeluna.com" method="post" enctype="text/plain">
+              <label class="sr-only" for="nl-email">Tu email</label>
+              <input id="nl-email" type="email" name="email" placeholder="tu@email.com" required />
+              <button type="submit" class="btn btn--primary">Suscribirme</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="container site-footer__legal">
+          <p>&copy; 2026 Cafe Luna. Todos los derechos reservados.</p>
+          <p><a href="#">Privacidad</a> · <a href="#">Terminos</a> · Hecho con cafe en Medellin.</p>
+        </div>
+      </footer>
+  </body>
+</html>
