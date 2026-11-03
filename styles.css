@@ -390,6 +390,8 @@ a:hover {
 .brand__tag {
   margin-top: .25rem;
   font-size: .62rem;
+  line-height: 1.2;
+  max-width: 28ch;
   letter-spacing: .12em;
   text-transform: uppercase;
   opacity: .72;
